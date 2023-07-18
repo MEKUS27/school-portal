@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .images{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 35vh;
+  }
+  .one{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .one h3{
+    color: #0D1C7A;
+  }
+  #Fullname{
+    margin-left: 80px;
+  }
+  .two{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .two h3{
+    color: #0D1C7A;
+  }
+  #Email{
+    margin-left: 70px;
+  }
+  .three{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .three h3{
+    color: #0D1C7A;
+  }
+  #App{
+    margin-left: 40px;
+  }
+  .four{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .four h3{
+    color: #0D1C7A;
+  }
+  #card{
+    margin-left: 130px;
+  }
+  .five{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .five h3{
+    color: #0D1C7A;
+  }
+  #selection{
+    margin-left: 130px;
+  }
+  .six{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .six h3{
+    color: #0D1C7A;
+  }
+  #payselect{
+    margin-left: 130px;
+  }
+  .seven{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  .seven h3{
+    color: #0D1C7A;
+  }
+  #skills{
+    margin-left: 130px;
+  }
+</style>
+<body>
+  <div class="images">
+    <img src="./images/images-removebg-preview.png" alt="">
+  </div>
+
+  <div class="one">
+    <h3>Fullname:  <span id="Fullname"></span> <span id="lname"></span> <hr></h3>
+  </div>
+
+  <div class="two">
+    <h3>Email: <span id="Email"></span> <hr></h3>
+  </div>
+
+  <div class="three">
+    <h3>Application Number:  <span id="App"></span> <hr></h3>
+  </div>
+
+  <div class="four">
+    <h3>Card number: <span id="card"></span> <hr></h3>
+  </div>
+
+  <div class="five">
+    <h3>State of Orign: <span id="selection"></span>  <hr></h3>
+  </div>
+
+  <div class="six">
+    <h3>Made:  <span id="payselect"></span><hr> </h3>
+  </div>
+
+  <div class="seven">
+    <h3>Skill:<span id="skills"></span> <hr></h3>
+  </div>
+    <script>
+          window.addEventListener('load', () =>{
+            let Fullname = localStorage.getItem('NAME');
+            let lname = localStorage.getItem('LNAME');
+            let Email = localStorage.getItem('MAIL');
+            let App = localStorage.getItem('APP');
+            let card = localStorage.getItem('CARDS');
+            let selection = localStorage.getItem('STATE');
+            let payselect = localStorage.getItem('PAY');
+            let skills = localStorage.getItem('SKIL');
+            let gender = localStorage.getItem('VAILD');
+            let day = localStorage.getItem('DATE');
+            
+            
+
+
+
+
+            document.getElementById('Fullname').innerHTML = Fullname;
+            document.getElementById('lname').innerHTML = lname;
+            document.getElementById('Email').innerHTML = Email;
+            document.getElementById('App').innerHTML = App;
+            document.getElementById('card').innerHTML = card;
+            document.getElementById('selection').innerHTML = selection;
+            document.getElementById('payselect').innerHTML = payselect;
+            document.getElementById('skills').innerHTML = skills;
+            document,getElementById('day').innerHTML = day;
+            
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="./images/images-removebg-preview.png" alt="" width="400px">
+    </div>
+    <div class="for">
+        <h1>Payment Portoal [ODLR]</h1>
+        <div class="NR">
+            <h4>NR: Payment must be made through Credit or Debit card </h4>
+        </div>
+        <div class="form">
+            <form method="get" action="welcome.html"  name="myform" onsubmit="return  check()">
+                <div class="phonenum">
+                    <div>
+                        <label>Firstname</label> <br>
+                        <input type="text" name="Fullname" id="Fullname" placeholder="Firstname">
+                    </div>
+                    <div>
+                        <label>Lastname</label> <br>
+                        <input type="text" name="lname" id="lname" placeholder="Lastname">
+                    </div>
+                </div>
+
+                <div class="num">
+                    <div>
+                        <label>Email</label> <br>
+                        <input type="text" name="Email"  id="Email"  placeholder="///.@gmail.com">
+                    </div>
+                    <div>
+                        <label>Application Number</label> <br>
+                        <input type="text" name="App" id="App" placeholder="111-22-34-454">
+                    </div>
+                </div>
+
+                <div class="num">
+                    <div>
+                        <label>Card number</label> <br>
+                        <input type="text" name="card" id="card" placeholder="***********">
+                    </div>
+                    <div>
+                        <label>Card pin</label> <br>
+                        <input type="password" name="pin" id="pin" placeholder="****">
+                    </div>
+                </div>
+                <div class="num1">
+                    <div>
+                        <label>State Orign</label> <br>
+                        <select  id="selection">
+                            <option  value="select State">Select State</option>
+                            <option   value="Abia" id="Abia">Abia State</option>
+                            <option   value="Imo" id="Imo">Imo State</option>
+                            <option  value="Enugu" id="Enugu">Enugu State</option>
+                            <option  value="Eboiny" id="Eboiny">Eboiny State</option>
+                            <option  value="Lagos" id="Lagos">Lagos State</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select id="payselect">
+                            <option value="Select Full or Half payment">Select Full or Half payment</option>
+                            <option  value="Fullpayment"  id="Fullpayment">Fullpayment</option>
+                            <option  value="Halfpayment" id="Halfpayment">Halfpayment</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="num2">
+                    <div>
+                        <label>Payment Date</label> <br>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div>
+                        <label></label> <br>
+                        <select id="skills">
+                            <option value="Select a Skill">Select a Skill</option>
+                            <option value="Frontend" id="Frontend">Frontend</option>
+                            <option value="Backend" id="Backend">Backend</option>
+                            <option value="FullStack" id="FullStack">FullStack</option>
+                        </select>
+                    </div>
+                </div>
+                <div> 
+                    <label>Gender</label> <br>
+                    <input type="radio" value="male" name="gender"> <span>Male</span>
+                    <input type="radio" value="female"  name="gender"> <span>Female</span>
+                </div>
+                <div>
+                    <button>Show invoice</button>
+                    <button type="submit">Pay</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function check(){
+            let Fullname = document.getElementById('Fullname');
+            name = Fullname.value;
+            let nameval=/^[a-zA-z]*$/;
+            Fullname.addEventListener('keyup',() =>{
+                Fullname.style.border = 'none';
+            });
+
+            
+            let lname = document.getElementById('lname');
+            let Lname = lname.value;
+            let lnameval = /^[a-zA-z]*$/;
+            lname.addEventListener('keyup', () =>{
+                lname.style.border = 'none';
+            });
+
+
+            let Email = document.getElementById('Email');
+            mail = Email.value;
+            let email = /^[a-zA-Z0-9.!#$%&'*+/=?^_'{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            Email.addEventListener('keyup',() =>{
+                Email.style.border = 'none'
+            });
+
+
+            let App = document.getElementById('App');
+            app = App.value;
+            let appnum = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            App.addEventListener('keyup',()=>{
+                App.style.border = 'none';
+            });
+
+
+            let card = document.getElementById('card');
+            cards = card.value;
+            let cardnum = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            card.addEventListener('keyup',() =>{
+                card.style.border = 'none';
+            });
+
+            let pin = document.getElementById('pin');
+            cpin = pin.value;
+            let cardpin =  /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            pin.addEventListener('keyup', () =>{
+                pin.style.border = 'none';
+            });
+
+            let state = document.getElementById('selection').value;
+            let Abia = document.getElementById('Abia').checked;
+            let Imo = document.getElementById('Imo').checked;
+            let Enugu = document.getElementById('Enugu').checked;
+            let Eboiny = document.getElementById('Eboiny').checked;
+            let Lagos = document.getElementById('Lagos').checked;
+            selection.addEventListener('keyup', () =>{
+                selection.style.border = 'none';
+            });
+
+            let  pay = document.getElementById('payselect').value;
+            let Fullpayment = document.getElementById('Fullpayment').checked;
+            let Halfpayment =document.getElementById('Halfpayment').checked;
+
+            payselect.addEventListener('keyup', () =>{
+                payselect.style.border = 'none';
+            });
+
+            let skil = document.getElementById('skills').value;
+            let Frontend = document.getElementById('Frontend').checked;
+            let Backend = document.getElementById('Backend').checked;
+            let FullStack = document.getElementById('FullStack').checked;
+
+            let gend = document.myform.gender;
+            let vaild = false;
+                for(j = 0; j < gend.length; j++){
+                    if(gend[j].checked){
+                        vaild = true;
+                        break;
+                    }
+                }
+
+            let day = document.getElementById('date').value;
+
+           
+           
+
+            if(name.trim() == ""){
+                alert ('Put in Your Firstname');
+                Fullname.style.border = '1px solid red';
+                return false;
+            }
+            else if(!nameval.test(name)){
+                alert('enter valid name');
+                return false;
+            }else if(Lname.trim() == ""){
+                alert('Put In Your Lastname');
+                lname.style.border = '1px solid red';
+                return false;
+            }else if(!lnameval.test(Lname)){
+                alert('enter a valid name');
+                return false;
+            }else if(mail.trim() ==""){
+                alert('Put In Your Email');
+                Email.style.border = '1px solid red';
+                return false;
+            }else if(!email.test(mail)){
+                alert('Enter a Vaild Email');
+                return false;
+            }else if(app.trim() ==""){
+                alert('Enter Your Application Number');
+                App.style.border ='1px solid red';
+                return false;
+            }else if(appnum.test(app)){
+                alert('Enter a Vaild Application Number');
+                return false;
+            }else if(app.length < 10){
+                alert('Enter a valid Application Number, Application Number  must be 10 in number');
+                return false;
+            }else  if(cards.trim() == ""){
+                alert('Enter Your Card Number');
+                card.style.border = '1px solid red';
+                return false;
+
+            }else if(cardnum.test(cards)){
+                alert('Enter a valid Card Number');
+                return false;
+
+            }else if(cards.length < 10){
+                alert('Card Number  must be 10 in number');
+                return false;
+
+            }else if(cpin.trim() == ""){
+                alert('Enter Your Card Pin Number');
+                pin.style.border = '1px solid red';
+                return false;
+
+            }else if(cardpin.test(cpin)){
+                alert('Enter a vaild Card Pin');
+                return false;
+
+            }else if(cpin.length < 4){
+                alert('Card Pin must be 4 in number');
+                return false;
+
+            }else if(state == 'select State'){
+                alert('Select your state of orign');
+                return false;
+
+            }else if(pay == 'Select Full or Half payment'){
+                alert('Please select your payment method Full or Half');
+                return false;
+            }else if(skil == 'Select a Skill'){
+                alert('please select a skill you like (one)');
+                return false;
+            }else if(!vaild){
+                alert('please select gender');
+                return false;
+            }else if(day.trim() == ""){
+                alert('Please put in your payment Date');
+                return false;
+            }else{
+                alert('Payment Succesfull you will recive your invoice now');
+                localStorage.setItem("NAME",name);
+                localStorage.setItem("LNAME",Lname);
+                localStorage.setItem("MAIL", mail);
+                localStorage.setItem("APP", app);
+                localStorage.setItem("CARDS",cards);
+                localStorage.setItem("STATE", state);
+                localStorage.setItem("PAY", pay);
+                localStorage.setItem("SKIL", skil);
+                localStorage.setItem("DATE",date);
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
